@@ -23,6 +23,7 @@ Route.on('/').render('welcome')
 Route
   .group(() => {
     Route.post('', 'RoomController.create')
+    Route.get('', 'RoomController.index')
 
     Route.get(':id', 'RoomController.select')
     Route.post(':id', 'RoomController.createMessage')

@@ -21,6 +21,11 @@ class RoomController {
     return room;
   }
 
+  async index ({}){
+    const room = await Room.query().fetch();
+    return room;
+  }
+
   async create () {
     const room = new Room();
     const uuid = uuidv4();
